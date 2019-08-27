@@ -1,0 +1,12 @@
+int indexOf(String str1, String str2){
+    if(str1.length()>=str2.length()){
+        if(str2.equals(str1.substring(0, str2.length()))){
+            return 0;
+        }
+        int index=1+indexOf(str1.substring(1), str2);
+        if(index!=0){
+            return index;
+        }
+    }
+    return -1;
+}
